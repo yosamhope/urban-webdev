@@ -1,0 +1,309 @@
+:root {
+    --primary-blue: #2563eb;
+    --dark-blue: #1e40af;
+    --light-blue: #dbeafe;
+    --text-dark: #1e293b;
+    --text-light: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+}
+
+/* Navigation */
+.navbar {
+
+
+    background: rgb(255, 255, 255);
+    padding: 1rem 5%;
+   
+    position: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+
+    gap: 20px; /* Space between links */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links a {
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-blue);
+    /* Hover Effect */
+
+    background-color: #84a5e2; /* Lighten background on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Animation for the ribbon */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.navbar {
+    animation: slideIn 0.5s ease-out; /* Apply the animation */
+}
+
+/* Hero Section */
+.hero {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+    color: white;
+    padding: 150px 20px 100px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.hero{
+    background-color:red;
+}
+
+.hero p{
+    margin: auto 2rem !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+/* Hover Effects */
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(45deg, #45a049, #4CAF50);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.cta-button:hover {
+    animation: pulse 1.5s infinite;
+}
+
+/* Ripple Effect */
+.cta-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;
+}
+
+.cta-button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    transition: 0s;
+}
+
+/* Entrance Animation */
+@keyframes buttonEntrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cta-button {
+    animation: buttonEntrance 0.8s ease-out;
+}
+
+/* Common Sections */
+.section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.portfolio-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+
+button {
+    background: var(--primary-blue);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--dark-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        display: block;
+        padding: 0.5rem;
+    }
+}
+
+.grid-container {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+
+    grid-template-rows: 1fr 1fr; /* 2 equal rows */
+
+    gap:20px; /* Optional spacing between grid items */
+
+}
+
+
+
+.grid-item {
+
+    /* Optional styling for individual grid items */
+
+}
+
+
+
+/* Positioning content in specific grid boxes: */
+
+.grid-item:nth-child(1) { /* First box (top left) */
+
+    grid-row-start: 1;
+
+    grid-column-start: 1;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+
+    grid-template-rows: 1fr 1fr; /* 2 equal rows */
+
+    gap:20px; /* Optional spacing between grid items */
+
+
+}
+
+
+
+.grid-item:nth-child(2) { /* Second box (top middle) */
+
+    grid-row-start: 1;
+
+    grid-column-start: 2;
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+
+    grid-template-rows: 1fr 1fr; /* 2 equal rows */
+
+    gap:20px; /* Optional spacing between grid items */
+
+
+}
+
+
+
+/* ... and so on for all 6 boxes, adjusting grid-row-start and grid-column-start as needed */

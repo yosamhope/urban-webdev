@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us -Ubern Web Developers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/about.css">
+
+
+   
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="section-title">About Ubern web developer</h1>
+            <p class="hero-subtitle">Crafting Digital Excellence</p>
+        </div>
+    </section>
+
+    <section class="content-section story-section">
+        <div class="container">
+            <h2 class="section-title animate">Our Story</h2>
+            <p class="mission-card">Founded in [Year], we started with a simple idea: technology should solve problems, not create them...</p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title animate">Our Mission</h2>
+            <div class="mission-card">
+                <h3>Transform Your Vision</h3>
+                <p>We create fast, secure, and user-friendly websites that stand out...</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section values-section">
+        <div class="container">
+            <h2 class="section-title animate">Our Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <i class="fas fa-star fa-3x"></i>
+                    <h3>Excellence</h3>
+                    <p>Every project is an opportunity to raise the bar</p>
+                </div>
+                <!-- Repeat for other values -->
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section team-section">
+        <div class="container">
+            <h2 class="section-title animate">Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="team-placeholder.jpg" alt="Team Member">
+                    <h3>John Doe</h3>
+                    <p>Lead Developer</p>
+                </div>
+                <!-- Repeat for other team members -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.content-section').forEach((section) => {
+            observer.observe(section);
+        });
+
+        document.querySelectorAll('.mission-card, .team-member').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
