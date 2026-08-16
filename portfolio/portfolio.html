@@ -10,8 +10,10 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - urbanwebdev</title>
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <title>Our Work - urbanwebdev</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/styles/styles.css">
+    <link rel="stylesheet" href="../assets/styles/portfolio.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -20,21 +22,21 @@
     <!-- End Google Tag Manager (noscript) -->
     <nav class="navbar">
         <div class="navbar-inner">
-            <a href="index.html" class="brand">
+            <a href="../index.html" class="brand">
                 <span class="brand-mark">UW</span>
                 <span class="brand-text">URBAN<br>WEBDEV</span>
             </a>
 
             <div class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Us</a>
-                <a href="services/services.html">Services</a>
-                <a href="portfolio/portfolio.html">Portfolio</a>
-                <a href="contact.html">Contact</a>
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About Us</a>
+                <a href="../services/services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="../contact.html">Contact</a>
             </div>
 
             <div class="navbar-actions">
-                <a href="#contactForm" class="nav-cta">Get in touch →</a>
+                <a href="../contact.html" class="nav-cta">Get in touch →</a>
                 <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                     <span class="hamburger-bar"></span>
                     <span class="hamburger-bar"></span>
@@ -46,12 +48,12 @@
 
     <header class="hero-split">
         <div class="hero-split-text">
-            <span class="eyebrow">Get in Touch</span>
-            <h1>Let’s Build <span class="accent">Something Great</span></h1>
-            <p>Tell us about your project and we’ll help shape the right digital solution. Starting from scratch, or improving something that’s already live — tell us where you are.</p>
+            <span class="eyebrow">Our Work</span>
+            <h1>Real Results for <span class="accent">Growing Businesses</span></h1>
+            <p>Explore the results we build for growing businesses — from online stores to custom platforms.</p>
             <div class="hero-split-actions">
-                <a href="#contactForm" class="cta-button">I need something new →</a>
-                <a href="#contactForm" class="btn-outline">I need to improve what exists</a>
+                <a href="../contact.html" class="cta-button">Start a Project →</a>
+                <a href="#portfolio-grid" class="btn-outline">See Case Studies</a>
             </div>
         </div>
         <div class="hero-split-visual">
@@ -66,72 +68,62 @@
         </div>
     </header>
 
-    <section class="contact-split">
-        <div class="contact-visual">
-            <span class="eyebrow">Get in Touch</span>
-            <h2>Describe the problem.<br>We’ll tell you what to build.</h2>
-            <p>Most people who reach out aren’t sure exactly what they need yet. That’s normal, and it’s what the first conversation is for.</p>
+    <div class="container">
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+            <button class="filter-btn" data-filter="cms">CMS</button>
+            <button class="filter-btn" data-filter="webapp">Web Apps</button>
         </div>
 
-        <div class="contact-card">
-            <h2>Get in touch</h2>
-            <form id="contactForm" class="contact-form-grid">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fullName">Name</label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+        <div class="projects-grid" id="portfolio-grid">
+            <div class="project-card" data-category="ecommerce">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="E-commerce Project">
+                </div>
+                <div class="project-info">
+                    <h3>Modern E-commerce Platform</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">MongoDB</span>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    <p>A full-featured online shopping platform with real-time inventory management.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fab fa-github"></i>
+                            Code
+                        </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+254 700 000000">
+            <div class="project-card" data-category="cms">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="CMS Project">
+                </div>
+                <div class="project-info">
+                    <h3>Custom CMS Solution</h3>
+                    <div class="project-tags">
+                        <span class="project-tag">WordPress</span>
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
                     </div>
-                    <div class="form-group">
-                        <label for="company">Company</label>
-                        <input type="text" id="company" name="company" placeholder="Company">
+                    <p>Custom content management system built for enterprise clients.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
                     </div>
                 </div>
-
-                <fieldset class="form-group starting-point">
-                    <legend>What best describes where you’re starting from?</legend>
-                    <label class="radio-option">
-                        <input type="radio" name="startingPoint" value="new" checked>
-                        <span>Nothing built yet - I need something new</span>
-                    </label>
-                    <label class="radio-option">
-                        <input type="radio" name="startingPoint" value="existing">
-                        <span>Something exists - I need to fix, connect, or grow it</span>
-                    </label>
-                </fieldset>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="country">Your Country</label>
-                        <input type="text" id="country" name="country" placeholder="Country">
-                    </div>
-                    <div class="form-group">
-                        <label for="projectDetails">Message/Project Details</label>
-                        <select id="projectDetails" name="projectDetails">
-                            <option value="">Select a topic</option>
-                            <option value="new-website">New Website</option>
-                            <option value="ecommerce">E-Commerce Store</option>
-                            <option value="platform-modernization">Platform Modernization</option>
-                            <option value="maintenance">Maintenance &amp; Support</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-
-                <button type="submit" class="cta-button submit-btn">Submit →</button>
-            </form>
+            </div>
         </div>
-    </section>
+    </div>
 
     <footer class="site-footer">
         <div class="footer-top">
@@ -155,39 +147,39 @@
             <div class="footer-col">
                 <h4>Our Services</h4>
                 <ul>
-                    <li><a href="services/services.html#pricing">Basic Website Design</a></li>
-                    <li><a href="services/services.html#pricing">Standard Website Design</a></li>
-                    <li><a href="services/services.html#pricing">E-commerce Website</a></li>
-                    <li><a href="services/services.html#additional-services">Website Maintenance</a></li>
-                    <li><a href="services/services.html#additional-services">SEO Optimization</a></li>
-                    <li><a href="services/services.html#additional-services">Hosting Solutions</a></li>
+                    <li><a href="../services/services.html#pricing">Basic Website Design</a></li>
+                    <li><a href="../services/services.html#pricing">Standard Website Design</a></li>
+                    <li><a href="../services/services.html#pricing">E-commerce Website</a></li>
+                    <li><a href="../services/services.html#additional-services">Website Maintenance</a></li>
+                    <li><a href="../services/services.html#additional-services">SEO Optimization</a></li>
+                    <li><a href="../services/services.html#additional-services">Hosting Solutions</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="portfolio/portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About Us</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
 
         <div class="footer-company-bar">
             <span class="footer-company-label">Company</span>
-            <a href="about.html">About Us</a>
-            <a href="portfolio/portfolio.html">Portfolio</a>
-            <a href="services/services.html">Services</a>
-            <a href="contact.html">Contact</a>
+            <a href="../about.html">About Us</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="../services/services.html">Services</a>
+            <a href="../contact.html">Contact</a>
         </div>
 
         <div class="footer-divider"></div>
 
         <div class="footer-bottom-row">
             <div class="footer-identity">
-                <a href="index.html" class="footer-logo">
+                <a href="../index.html" class="footer-logo">
                     <span class="brand-mark">UW</span>
                     <span class="brand-text">URBAN<br>WEBDEV</span>
                 </a>
@@ -219,6 +211,35 @@
         </div>
     </footer>
 
-    <script src="./assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+                projectCards.forEach(card => {
+                    const category = card.dataset.category;
+                    card.style.display = (filter === 'all' || category === filter) ? 'block' : 'none';
+                });
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.project-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>

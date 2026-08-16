@@ -10,13 +10,10 @@
     <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us -Ubern Web Developers</title>
+    <title>About Us - urbanwebdev</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="stylesheet" href="./styles/about.css">
-
-
-   
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="./assets/styles/about.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -24,25 +21,56 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <nav class="navbar">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="portfolio.html">Portfolio</a>
-            <a href="contact.html">Contact</a>
+        <div class="navbar-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-mark">UW</span>
+                <span class="brand-text">URBAN<br>WEBDEV</span>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services/services.html">Services</a>
+                <a href="portfolio/portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="navbar-actions">
+                <a href="contact.html" class="nav-cta">Get in touch →</a>
+                <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
         </div>
     </nav>
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="section-title">About Ubern web developer</h1>
-            <p class="hero-subtitle">Crafting Digital Excellence</p>
+    <header class="hero-split">
+        <div class="hero-split-text">
+            <span class="eyebrow">About urbanwebdev</span>
+            <h1>Digital Experiences <span class="accent">Designed for Growth</span></h1>
+            <p>We create fast, secure, and user-friendly websites that stand out, connect with your audience, and support long-term business growth.</p>
+            <div class="hero-split-actions">
+                <a href="services/services.html" class="cta-button">Our Services →</a>
+                <a href="contact.html" class="btn-outline">Get in Touch</a>
+            </div>
         </div>
-    </section>
+        <div class="hero-split-visual">
+            <div class="visual-grid">
+                <div class="visual-card card-a"><span>💬</span></div>
+                <div class="visual-card card-b"><span>💻</span></div>
+                <div class="visual-card card-c"><span>👥</span></div>
+                <div class="visual-card card-d"><span>🔒</span></div>
+                <div class="visual-card card-e"><span>☁️</span></div>
+                <div class="visual-card card-f"><span>📱</span></div>
+            </div>
+        </div>
+    </header>
 
     <section class="content-section story-section">
         <div class="container">
             <h2 class="section-title animate">Our Story</h2>
-            <p class="mission-card">Founded in [Year], we started with a simple idea: technology should solve problems, not create them...</p>
+            <p class="mission-card">We began with a simple idea: technology should solve business problems, not add friction. From the first strategy call to the final launch, we build digital experiences that help organizations grow with clarity and confidence.</p>
         </div>
     </section>
 
@@ -51,7 +79,7 @@
             <h2 class="section-title animate">Our Mission</h2>
             <div class="mission-card">
                 <h3>Transform Your Vision</h3>
-                <p>We create fast, secure, and user-friendly websites that stand out...</p>
+                <p>We create fast, secure, and user-friendly websites that stand out, connect with your audience, and support long-term business growth.</p>
             </div>
         </div>
     </section>
@@ -63,9 +91,18 @@
                 <div class="value-card">
                     <i class="fas fa-star fa-3x"></i>
                     <h3>Excellence</h3>
-                    <p>Every project is an opportunity to raise the bar</p>
+                    <p>Every project is an opportunity to raise the bar.</p>
                 </div>
-                <!-- Repeat for other values -->
+                <div class="value-card">
+                    <i class="fas fa-handshake fa-3x"></i>
+                    <h3>Partnership</h3>
+                    <p>We work closely with clients to understand real goals and practical needs.</p>
+                </div>
+                <div class="value-card">
+                    <i class="fas fa-shield-alt fa-3x"></i>
+                    <h3>Trust</h3>
+                    <p>Clear communication, dependable delivery, and long-term support drive every engagement.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -75,32 +112,105 @@
             <h2 class="section-title animate">Meet the Team</h2>
             <div class="team-grid">
                 <div class="team-member">
-                    <img src="team-placeholder.jpg" alt="Team Member">
-                    <h3>John Doe</h3>
+                    <img src="https://via.placeholder.com/200" alt="Team Member">
+                    <h3>Jane Wanjiku</h3>
                     <p>Lead Developer</p>
                 </div>
-                <!-- Repeat for other team members -->
+                <div class="team-member">
+                    <img src="https://via.placeholder.com/200" alt="Team Member">
+                    <h3>Daniel Otieno</h3>
+                    <p>UI/UX Specialist</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <script>
-        // Intersection Observer for scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+    <footer class="site-footer">
+        <div class="footer-top">
+            <div class="footer-cta">
+                <h2>Let’s build something <span class="accent">exceptional</span> together.</h2>
+                <p>Partner with urbanwebdev for fast, secure, and conversion-focused websites built for growing Kenyan businesses.</p>
+            </div>
 
-        document.querySelectorAll('.content-section').forEach((section) => {
-            observer.observe(section);
-        });
+            <form class="footer-subscribe" id="newsletterForm">
+                <label for="newsletterEmail">Subscribe to Web Insights</label>
+                <div class="subscribe-row">
+                    <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Enter your email address" required>
+                    <button type="submit">Join</button>
+                </div>
+            </form>
+        </div>
 
-        document.querySelectorAll('.mission-card, .team-member').forEach((el) => {
-            observer.observe(el);
-        });
-    </script>
+        <div class="footer-divider"></div>
+
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="services/services.html#pricing">Basic Website Design</a></li>
+                    <li><a href="services/services.html#pricing">Standard Website Design</a></li>
+                    <li><a href="services/services.html#pricing">E-commerce Website</a></li>
+                    <li><a href="services/services.html#additional-services">Website Maintenance</a></li>
+                    <li><a href="services/services.html#additional-services">SEO Optimization</a></li>
+                    <li><a href="services/services.html#additional-services">Hosting Solutions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="portfolio/portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-company-bar">
+            <span class="footer-company-label">Company</span>
+            <a href="about.html">About Us</a>
+            <a href="portfolio/portfolio.html">Portfolio</a>
+            <a href="services/services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom-row">
+            <div class="footer-identity">
+                <a href="index.html" class="footer-logo">
+                    <span class="brand-mark">UW</span>
+                    <span class="brand-text">URBAN<br>WEBDEV</span>
+                </a>
+                <p>📍 Nairobi, Kenya</p>
+                <p class="footer-phone">📞 0717 551 542</p>
+            </div>
+
+            <div class="footer-social">
+                <span>Connect with us</span>
+                <div class="social-icons">
+                    <a href="https://facebook.com/urbanwebdev" target="_blank" rel="noopener" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.23 10.44 22v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22C18.34 21.23 22 17.08 22 12.06z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/urbanwebdev" target="_blank" rel="noopener" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.46.66.26 1.22.6 1.77 1.15.55.55.89 1.11 1.15 1.77.24.64.41 1.37.46 2.43.05 1.06.06 1.4.06 4.13s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.46 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.24-1.37.41-2.43.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.13-.06c-1.06-.05-1.79-.22-2.43-.46a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.24-.64-.41-1.37-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.13c.05-1.06.22-1.79.46-2.43.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.44 2.52c.64-.24 1.37-.41 2.43-.46C8.94 2.01 9.28 2 12 2zm0 1.8c-2.67 0-2.99.01-4.04.06-.87.04-1.34.18-1.65.3-.42.16-.71.36-1.02.67-.31.31-.5.6-.67 1.02-.12.31-.26.78-.3 1.65-.05 1.05-.06 1.37-.06 4.04s.01 2.99.06 4.04c.04.87.18 1.34.3 1.65.16.42.36.71.67 1.02.31.31.6.5 1.02.67.31.12.78.26 1.65.3 1.05.05 1.37.06 4.04.06s2.99-.01 4.04-.06c.87-.04 1.34-.18 1.65-.3.42-.16.71-.36 1.02-.67.31-.31.5-.6.67-1.02.12-.31.26-.78.3-1.65.05-1.05.06-1.37.06-4.04s-.01-2.99-.06-4.04c-.04-.87-.18-1.34-.3-1.65a2.73 2.73 0 0 0-.67-1.02 2.73 2.73 0 0 0-1.02-.67c-.31-.12-.78-.26-1.65-.3-1.05-.05-1.37-.06-4.04-.06zm0 3.07a5.13 5.13 0 1 1 0 10.26 5.13 5.13 0 0 1 0-10.26zm0 1.8a3.33 3.33 0 1 0 0 6.66 3.33 3.33 0 0 0 0-6.66zm5.34-1.99a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg>
+                    </a>
+                    <a href="https://linkedin.com/company/urbanwebdev" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3.56A1.96 1.96 0 1 0 5.28 7.5a1.96 1.96 0 0 0-.03-3.94zM20.44 20h-3.37v-5.95c0-1.42-.03-3.25-1.98-3.25-1.98 0-2.29 1.55-2.29 3.15V20H9.44V8.5h3.24v1.57h.05c.45-.85 1.56-1.75 3.2-1.75 3.42 0 4.51 2.25 4.51 5.18V20z"/></svg>
+                    </a>
+                    <a href="https://x.com/urbanwebdev" target="_blank" rel="noopener" aria-label="X (Twitter)">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-7.2 8.24L23.2 22h-6.6l-5.17-6.77L5.5 22H2.4l7.7-8.82L1 2h6.76l4.67 6.2L18.9 2zm-1.15 18h1.83L7.35 3.9H5.4L17.75 20z"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-legal">
+                <p>© 2026 urbanwebdev. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,204 @@
+
+:root {
+    --primary-blue: #2563eb;
+    --dark-blue: #1e40af;
+    --light-blue: #dbeafe;
+    --text-dark: #1e293b;
+    --text-light: #f8fafc;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --muted: #64748b;
+    --shadow: rgba(15, 23, 42, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+    color: var(--text-light);
+    padding: 120px 20px 80px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in;
+}
+
+.hero-subtitle {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section-title {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    color: var(--text-dark);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 3px;
+    background: var(--primary-blue);
+}
+
+.content-section {
+    padding: 5rem 0;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.6s ease-out;
+}
+
+.content-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.story-section {
+    background: #eff6ff;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.92);
+    padding: 2rem;
+    border-radius: 14px;
+    margin: 2rem auto 0;
+    max-width: 900px;
+    border-left: 4px solid var(--primary-blue);
+    box-shadow: 0 8px 20px var(--shadow);
+    transform: translateX(-20px);
+    transition: all 0.4s ease;
+}
+
+.mission-card.visible {
+    transform: translateX(0);
+}
+
+.mission-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 0.75rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.value-card {
+    background: var(--surface);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 8px 18px var(--shadow);
+    border-top: 4px solid var(--primary-blue);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(37, 99, 235, 0.12);
+}
+
+.value-card i {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.value-card h3 {
+    color: var(--dark-blue);
+    margin-bottom: 0.75rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.team-member {
+    background: var(--surface);
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 8px 18px var(--shadow);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.team-member.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-member img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 1.25rem;
+    border: 3px solid var(--primary-blue);
+    object-fit: cover;
+}
+
+.team-member h3 {
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(45deg, #4CAF50, #45a049);
+    color: var(--text-light);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 700;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(76, 175, 80, 0.25);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .team-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
