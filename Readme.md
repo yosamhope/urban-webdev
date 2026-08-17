@@ -261,3 +261,10 @@ Once those are addressed, the site will be much easier to maintain and will rend
 This project is best described as a static business website prototype that needs cleanup before deployment. The codebase includes many good ideas and sections, but it currently has broken asset paths, duplicate markup, placeholder content, and inconsistent styling.
 
 The next step should be to standardize the project structure and correct the relative paths before any further design or content work is completed.
+
+# PRETTY URLS
+Added pretty URLs to the project by creating folders for each page and moving the HTML files into them. Updated all internal links to point to the new folder structure.
+
+
+### References
+[text](https://www.lnwebworks.com/insight)
