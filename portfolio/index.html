@@ -28,15 +28,15 @@
             </a>
 
             <div class="nav-links" id="navLinks">
-                <a href="../">Home</a>
-                <a href="../about/">About Us</a>
-                <a href="../services/">Services</a>
-                <a href="./">Portfolio</a>
-                <a href="../contact/">Contact</a>
+                <a href="../" data-i18n="nav.home">Home</a>
+                <a href="../about/" data-i18n="nav.about">About Us</a>
+                <a href="../services/" data-i18n="nav.services">Services</a>
+                <a href="./" data-i18n="nav.portfolio">Portfolio</a>
+                <a href="../contact/" data-i18n="nav.contact">Contact</a>
             </div>
 
             <div class="navbar-actions">
-                <a href="../contact/" class="nav-cta">Get in touch →</a>
+                <a href="../contact/" class="nav-cta" data-i18n="nav.cta">Get in touch →</a>
                 <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
                     <span class="hamburger-bar"></span>
                     <span class="hamburger-bar"></span>
@@ -48,12 +48,12 @@
 
     <header class="hero-split">
         <div class="hero-split-text">
-            <span class="eyebrow">Our Work</span>
-            <h1>Real Results for <span class="accent">Growing Businesses</span></h1>
-            <p>Explore the results we build for growing businesses — from online stores to custom platforms.</p>
+            <span class="eyebrow" data-i18n="hero.portfolio.eyebrow">Our Work</span>
+            <h1 data-i18n-html="hero.portfolio.headingHtml">Real Results for <span class="accent">Growing Businesses</span></h1>
+            <p data-i18n="hero.portfolio.text">Explore the results we build for growing businesses — from online stores to custom platforms.</p>
             <div class="hero-split-actions">
-                <a href="../contact/" class="cta-button">Start a Project →</a>
-                <a href="#portfolio-grid" class="btn-outline">See Case Studies</a>
+                <a href="../contact/" class="cta-button" data-i18n="hero.portfolio.btn1">Start a Project →</a>
+                <a href="#portfolio-grid" class="btn-outline" data-i18n="hero.portfolio.btn2">See Case Studies</a>
             </div>
         </div>
         <div class="hero-split-visual">
@@ -128,15 +128,15 @@
     <footer class="site-footer">
         <div class="footer-top">
             <div class="footer-cta">
-                <h2>Let’s build something <span class="accent">exceptional</span> together.</h2>
-                <p>Partner with urbanwebdev for fast, secure, and conversion-focused websites built for growing Kenyan businesses.</p>
+                <h2 data-i18n-html="footer.ctaHeadingHtml">Let’s build something <span class="accent">exceptional</span> together.</h2>
+                <p data-i18n="footer.ctaText">Partner with urbanwebdev for fast, secure, and conversion-focused websites built for growing Kenyan businesses.</p>
             </div>
 
             <form class="footer-subscribe" id="newsletterForm">
-                <label for="newsletterEmail">Subscribe to Web Insights</label>
+                <label for="newsletterEmail" data-i18n="footer.subscribeLabel">Subscribe to Web Insights</label>
                 <div class="subscribe-row">
                     <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Enter your email address" required>
-                    <button type="submit">Join</button>
+                    <button type="submit" data-i18n="footer.subscribeBtn">Join</button>
                 </div>
             </form>
         </div>
@@ -145,19 +145,19 @@
 
         <div class="footer-columns">
             <div class="footer-col">
-                <h4>Our Services</h4>
+                <h4 data-i18n="footer.servicesHeading">Our Services</h4>
                 <ul>
-                    <li><a href="../services/services.html#pricing">Basic Website Design</a></li>
-                    <li><a href="../services/services.html#pricing">Standard Website Design</a></li>
-                    <li><a href="../services/services.html#pricing">E-commerce Website</a></li>
-                    <li><a href="../services/services.html#additional-services">Website Maintenance</a></li>
-                    <li><a href="../services/services.html#additional-services">SEO Optimization</a></li>
-                    <li><a href="../services/services.html#additional-services">Hosting Solutions</a></li>
+                    <li><a href="../services/services.html#pricing" data-i18n="footer.svc.basic">Basic Website Design</a></li>
+                    <li><a href="../services/services.html#pricing" data-i18n="footer.svc.standard">Standard Website Design</a></li>
+                    <li><a href="../services/services.html#pricing" data-i18n="footer.svc.ecommerce">E-commerce Website</a></li>
+                    <li><a href="../services/services.html#additional-services" data-i18n="footer.svc.maintenance">Website Maintenance</a></li>
+                    <li><a href="../services/services.html#additional-services" data-i18n="footer.svc.seo">SEO Optimization</a></li>
+                    <li><a href="../services/services.html#additional-services" data-i18n="footer.svc.hosting">Hosting Solutions</a></li>
                 </ul>
             </div>
 
             <div class="footer-col">
-                <h4>Quick Links</h4>
+                <h4 data-i18n="footer.quickLinksHeading">Quick Links</h4>
                 <ul>
                     <li><a href="../">Home</a></li>
                     <li><a href="../about/">About Us</a></li>
@@ -168,7 +168,7 @@
         </div>
 
         <div class="footer-company-bar">
-            <span class="footer-company-label">Company</span>
+            <span class="footer-company-label" data-i18n="footer.companyLabel">Company</span>
             <a href="../about/">About Us</a>
             <a href="./">Portfolio</a>
             <a href="../services/">Services</a>
@@ -188,7 +188,7 @@
             </div>
 
             <div class="footer-social">
-                <span>Connect with us</span>
+                <span data-i18n="footer.connect">Connect with us</span>
                 <div class="social-icons">
                     <a href="https://facebook.com/urbanwebdev" target="_blank" rel="noopener" aria-label="Facebook">
                         <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06C2 17.08 5.66 21.23 10.44 22v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22C18.34 21.23 22 17.08 22 12.06z"/></svg>
@@ -206,7 +206,7 @@
             </div>
 
             <div class="footer-legal">
-                <p>© 2026 urbanwebdev. All rights reserved.</p>
+                <p data-i18n="footer.legal">© 2026 urbanwebdev. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -241,5 +241,43 @@
             observer.observe(card);
         });
     </script>
+    <div class="a11y-widget" id="a11yWidget">
+        <button type="button" class="a11y-toggle" id="a11yToggle" aria-label="Accessibility options" aria-expanded="false" aria-controls="a11yPanel">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 4.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM4 8.2c0-.9.72-1.7 1.63-1.7H18.4c.9 0 1.63.8 1.63 1.7 0 .93-.73 1.7-1.63 1.7h-4.87v2.1l3.02 8.14a1.15 1.15 0 0 1-2.15.8L12 13.9l-2.4 6.94a1.15 1.15 0 0 1-2.16-.8l3.03-8.14v-2.1H5.63C4.72 9.9 4 9.13 4 8.2z"/></svg>
+        </button>
+
+        <div class="a11y-panel" id="a11yPanel" hidden>
+            <div class="a11y-section">
+                <span class="a11y-label">Text Size</span>
+                <div class="a11y-btn-row">
+                    <button type="button" data-a11y-fontstep="-1" aria-label="Decrease text size">A-</button>
+                    <button type="button" data-a11y-fontreset aria-label="Reset text size">A</button>
+                    <button type="button" data-a11y-fontstep="1" aria-label="Increase text size">A+</button>
+                </div>
+            </div>
+
+            <div class="a11y-section">
+                <span class="a11y-label">Theme</span>
+                <div class="a11y-btn-row">
+                    <button type="button" data-a11y-theme="light" aria-label="Light theme">Light</button>
+                    <button type="button" data-a11y-theme="dark" aria-label="Dark theme">Dark</button>
+                </div>
+            </div>
+
+            <div class="a11y-section">
+                <label class="a11y-label" for="a11yLanguage">Language</label>
+                <select id="a11yLanguage">
+                    <option value="en">English</option>
+                    <option value="sw">Kiswahili</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ar">العربية</option>
+                    <option value="zh">中文</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/js/accessibility.js"></script>
 </body>
 </html>
