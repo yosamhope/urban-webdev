@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             alert('Thank you for your message! We will respond shortly.');
             form.reset();
-        });
+        })
     }
 
     const newsletterForm = document.getElementById('newsletterForm');

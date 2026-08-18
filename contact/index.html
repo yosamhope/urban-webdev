@@ -258,5 +258,27 @@
     </div>
 
     <script src="../assets/js/accessibility.js"></script>
+    <div class="wa-widget">
+        <button type="button" class="wa-toggle" id="waToggle" aria-haspopup="dialog" aria-controls="waModalOverlay" aria-label="Message us on WhatsApp">
+            <img src="../assets/icons/whatsapp.svg" alt="" width="32" height="32">
+        </button>
+    </div>
+
+    <div class="wa-modal-overlay" id="waModalOverlay" hidden>
+        <div class="wa-modal" role="dialog" aria-modal="true" aria-labelledby="waModalTitle">
+            <button type="button" class="wa-modal-close" id="waModalClose" aria-label="Close">&times;</button>
+            <div class="wa-modal-header">
+                <img src="../assets/icons/whatsapp.svg" alt="" width="28" height="28">
+                <h3 id="waModalTitle">Chat with us on WhatsApp</h3>
+            </div>
+            <p class="wa-modal-subtext">Type your message below and we’ll open WhatsApp with it ready to send.</p>
+            <form id="waMessageForm">
+                <textarea id="waMessageInput" name="waMessage" placeholder="Hi urbanwebdev, I’d like to ask about..." required></textarea>
+                <button type="submit" class="wa-modal-send">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../assets/js/whatsapp-widget.js"></script>
 </body>
 </html>
