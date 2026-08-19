@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="ERP dashboard with charts and modules">
+  <defs>
+    <linearGradient id="erpBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#erpBg)"/>
+  <rect x="40" y="55" width="320" height="290" rx="12" fill="#0f172a" stroke="#2563eb" stroke-width="2"/>
+  <rect x="40" y="55" width="90" height="290" rx="12" fill="#111827"/>
+  <rect x="58" y="80" width="55" height="10" rx="3" fill="#60a5fa"/>
+  <rect x="58" y="105" width="55" height="8" rx="3" fill="#334155"/>
+  <rect x="58" y="123" width="55" height="8" rx="3" fill="#334155"/>
+  <rect x="58" y="141" width="55" height="8" rx="3" fill="#334155"/>
+  <rect x="58" y="159" width="55" height="8" rx="3" fill="#334155"/>
+  <g transform="translate(150 80)">
+    <rect x="0" y="0" width="90" height="80" rx="8" fill="#1e293b"/>
+    <rect x="10" y="50" width="12" height="22" fill="#60a5fa"/>
+    <rect x="28" y="35" width="12" height="37" fill="#93c5fd"/>
+    <rect x="46" y="20" width="12" height="52" fill="#dbeafe"/>
+    <rect x="64" y="42" width="12" height="30" fill="#60a5fa"/>
+  </g>
+  <g transform="translate(255 80)">
+    <rect x="0" y="0" width="90" height="80" rx="8" fill="#1e293b"/>
+    <circle cx="45" cy="40" r="28" fill="none" stroke="#334155" stroke-width="10"/>
+    <path d="M45 12 A28 28 0 0 1 70 55" fill="none" stroke="#60a5fa" stroke-width="10"/>
+    <path d="M45 12 A28 28 0 0 0 20 60" fill="none" stroke="#dbeafe" stroke-width="10"/>
+  </g>
+  <g transform="translate(150 175)">
+    <rect x="0" y="0" width="195" height="140" rx="8" fill="#1e293b"/>
+    <rect x="14" y="16" width="167" height="12" rx="3" fill="#334155"/>
+    <rect x="14" y="16" width="90" height="12" rx="3" fill="#60a5fa"/>
+    <rect x="14" y="44" width="167" height="12" rx="3" fill="#334155"/>
+    <rect x="14" y="44" width="130" height="12" rx="3" fill="#93c5fd"/>
+    <rect x="14" y="72" width="167" height="12" rx="3" fill="#334155"/>
+    <rect x="14" y="72" width="60" height="12" rx="3" fill="#dbeafe"/>
+    <rect x="14" y="100" width="167" height="12" rx="3" fill="#334155"/>
+    <rect x="14" y="100" width="105" height="12" rx="3" fill="#60a5fa"/>
+  </g>
+</svg>

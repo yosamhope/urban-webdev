@@ -1,0 +1,89 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Dark background -->
+  <rect width="400" height="400" fill="#1a1a2e"/>
+  
+  <!-- Network diagram with neon effect -->
+  <defs>
+    <filter id="networkGlow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#44ff44;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#44ff44;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Central node glow -->
+  <circle cx="200" cy="200" r="80" fill="url(#nodeGlow)"/>
+  
+  <!-- Connection lines -->
+  <g stroke="#44ff44" stroke-width="2" fill="none" filter="url(#networkGlow)" opacity="0.7">
+    <!-- Center to top -->
+    <line x1="200" y1="200" x2="200" y2="100"/>
+    <!-- Center to bottom -->
+    <line x1="200" y1="200" x2="200" y2="300"/>
+    <!-- Center to left -->
+    <line x1="200" y1="200" x2="100" y2="200"/>
+    <!-- Center to right -->
+    <line x1="200" y1="200" x2="300" y2="200"/>
+    <!-- Center to top-left -->
+    <line x1="200" y1="200" x2="120" y2="120"/>
+    <!-- Center to top-right -->
+    <line x1="200" y1="200" x2="280" y2="120"/>
+    <!-- Center to bottom-left -->
+    <line x1="200" y1="200" x2="120" y2="280"/>
+    <!-- Center to bottom-right -->
+    <line x1="200" y1="200" x2="280" y2="280"/>
+  </g>
+  
+  <!-- Central node -->
+  <circle cx="200" cy="200" r="35" fill="none" stroke="#44ff44" stroke-width="3" filter="url(#networkGlow)"/>
+  <circle cx="200" cy="200" r="25" fill="none" stroke="#44ff44" stroke-width="2" filter="url(#networkGlow)"/>
+  <circle cx="200" cy="200" r="15" fill="#44ff44" opacity="0.8" filter="url(#networkGlow)"/>
+  
+  <!-- Surrounding nodes -->
+  <g filter="url(#networkGlow)">
+    <!-- Top -->
+    <circle cx="200" cy="100" r="15" fill="none" stroke="#44ff44" stroke-width="2"/>
+    <circle cx="200" cy="100" r="8" fill="#44ff44" opacity="0.6"/>
+    
+    <!-- Bottom -->
+    <circle cx="200" cy="300" r="15" fill="none" stroke="#44ff44" stroke-width="2"/>
+    <circle cx="200" cy="300" r="8" fill="#44ff44" opacity="0.6"/>
+    
+    <!-- Left -->
+    <circle cx="100" cy="200" r="15" fill="none" stroke="#44ff44" stroke-width="2"/>
+    <circle cx="100" cy="200" r="8" fill="#44ff44" opacity="0.6"/>
+    
+    <!-- Right -->
+    <circle cx="300" cy="200" r="15" fill="none" stroke="#44ff44" stroke-width="2"/>
+    <circle cx="300" cy="200" r="8" fill="#44ff44" opacity="0.6"/>
+    
+    <!-- Diagonals -->
+    <circle cx="120" cy="120" r="12" fill="none" stroke="#44ff44" stroke-width="2"/>
+    <circle cx="120" cy="120" r="6" fill="#44ff44" opacity="0.5"/>
+    
+    <circle cx="280" cy="120" r="12" fill="none" stroke="#44ff44" stroke-width="2"/>
+    <circle cx="280" cy="120" r="6" fill="#44ff44" opacity="0.5"/>
+    
+    <circle cx="120" cy="280" r="12" fill="none" stroke="#44ff44" stroke-width="2"/>
+    <circle cx="120" cy="280" r="6" fill="#44ff44" opacity="0.5"/>
+    
+    <circle cx="280" cy="280" r="12" fill="none" stroke="#44ff44" stroke-width="2"/>
+    <circle cx="280" cy="280" r="6" fill="#44ff44" opacity="0.5"/>
+  </g>
+  
+  <!-- Data flow indicators -->
+  <g filter="url(#networkGlow)">
+    <path d="M 200 165 L 200 185" stroke="#44ff44" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M 235 200 L 215 200" stroke="#44ff44" stroke-width="1.5" fill="none" opacity="0.5"/>
+  </g>
+  
+  <!-- Placeholder text -->
+  <text x="200" y="360" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.5)" text-anchor="middle" font-weight="bold">Network Diagram</text>
+  <text x="200" y="385" font-family="Arial, sans-serif" font-size="12" fill="rgba(255,255,255,0.3)" text-anchor="middle">(Replace with actual image)</text>
+</svg>
