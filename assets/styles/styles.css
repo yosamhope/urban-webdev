@@ -103,6 +103,113 @@ img {
     transform: translateY(-2px);
 }
 
+.nav-dropdown {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.dropdown-caret {
+    font-size: 0.65em;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+.nav-dropdown:hover .dropdown-caret,
+.nav-dropdown:focus-within .dropdown-caret,
+.nav-dropdown.dropdown-open .dropdown-caret {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 0.4rem;
+    min-width: 260px;
+    max-height: 70vh;
+    overflow-y: auto;
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 1100;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu,
+.nav-dropdown.dropdown-open .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.nav-dropdown-menu a {
+    padding: 0.55rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.86rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-dropdown-menu a:hover {
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    .nav-dropdown {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-dropdown-toggle {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .nav-dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: transparent;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0;
+        margin-top: 0;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .nav-dropdown.dropdown-open .nav-dropdown-menu {
+        max-height: 600px;
+        padding: 0.3rem 0 0.5rem 1.25rem;
+    }
+
+    .nav-dropdown-menu a {
+        color: var(--text-dark);
+        white-space: normal;
+    }
+}
+
 .navbar-actions {
     display: flex;
     align-items: center;
@@ -245,17 +352,67 @@ img {
 }
 
 .visual-card {
+    position: relative;
     overflow: hidden;
     border-radius: 14px;
     background: var(--light-blue);
     box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(22px);
+}
+
+.visual-card.visible {
+    animation: cardReveal 0.6s ease forwards;
+}
+
+.visual-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.2);
 }
 
 .visual-card img {
     display: block;
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 148%;
+    height: 148%;
     object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+.visual-card.anim-spin img {
+    animation: cardSpin var(--spin-duration, 26s) linear infinite;
+}
+
+.visual-card.anim-slide img {
+    animation: cardSlide var(--slide-duration, 6s) ease-in-out infinite;
+}
+
+.visual-card:hover img {
+    animation-play-state: paused;
+}
+
+@keyframes cardSpin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes cardSlide {
+    0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+    50% { transform: translate(-50%, -50%) translateY(-4%); }
+}
+
+@keyframes cardReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .visual-card.anim-spin img,
+    .visual-card.anim-slide img {
+        animation: none;
+    }
 }
 
 .visual-card.card-a { grid-column: 1 / 2; grid-row: 1 / 2; }
@@ -1032,7 +1189,7 @@ img {
 /* Accessibility widget — floating text size / theme / language control */
 .a11y-widget {
     position: fixed;
-    right: 1.25rem;
+    left: 1.25rem;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1300;
@@ -1130,9 +1287,9 @@ img {
 
 @media (max-width: 768px) {
     .a11y-widget {
-        right: 0.75rem;
+        right: 1rem;
         top: auto;
-        bottom: 1.25rem;
+        bottom: 25rem;
         transform: none;
         flex-direction: column-reverse;
         align-items: flex-end;
@@ -1221,8 +1378,8 @@ html[data-theme="dark"] .a11y-section select {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     border: none;
     background: #25d366;
@@ -1458,16 +1615,37 @@ html[data-theme="dark"] .wa-modal-close {
     background: radial-gradient(circle at 30% 30%, rgba(239, 67, 88, 0.25), transparent 60%), #14090b;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(22px);
+    transition: none;
 }
 
-.stat-tile.image-tile svg {
-    width: 34%;
-    height: 34%;
-    max-width: 90px;
-    max-height: 90px;
-    color: #ef4358;
-    position: relative;
+.stat-tile.image-tile.visible {
+    animation: cardReveal 0.6s ease forwards;
+}
+
+.stat-tile.image-tile img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 148%;
+    height: 148%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
     z-index: 1;
+    opacity: 0.85;
+}
+
+.stat-tile.image-tile.anim-spin img {
+    animation: cardSpin var(--spin-duration, 30s) linear infinite;
+}
+
+.stat-tile.image-tile.anim-slide img {
+    animation: cardSlide var(--slide-duration, 7s) ease-in-out infinite;
+}
+
+.stat-tile.image-tile:hover img {
+    animation-play-state: paused;
 }
 
 .stat-tile.image-tile::after {

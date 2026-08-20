@@ -11,8 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('.animate-on-scroll, .benefits-section, .process-section, .cta-section, .pricing-card, .project-card, .content-section, .mission-card, .team-member').forEach((el) => {
+        document.querySelectorAll('.animate-on-scroll, .benefits-section, .process-section, .cta-section, .pricing-card, .project-card, .content-section, .mission-card, .team-member, .visual-card, .stat-tile.image-tile').forEach((el) => {
             observer.observe(el);
+        });
+    } else {
+        // Fallback for browsers without IntersectionObserver support: reveal immediately
+        document.querySelectorAll('.visual-card, .stat-tile.image-tile').forEach((el) => {
+            el.classList.add('visible');
         });
     }
 
@@ -43,6 +48,27 @@ document.addEventListener('DOMContentLoaded', function() {
             newsletterForm.reset();
         });
     }
+
+    // Services nav dropdown: caret toggles the submenu without navigating (desktop hover
+    // already reveals it via CSS; this adds a reliable tap/click toggle for touch devices)
+    document.querySelectorAll('.nav-dropdown .dropdown-caret').forEach(function (caret) {
+        caret.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const dropdown = caret.closest('.nav-dropdown');
+            if (dropdown) {
+                dropdown.classList.toggle('dropdown-open');
+            }
+        });
+    });
+
+    document.addEventListener('click', function (e) {
+        document.querySelectorAll('.nav-dropdown.dropdown-open').forEach(function (dropdown) {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('dropdown-open');
+            }
+        });
+    });
 
     // ISO-standard hamburger menu toggle for mobile media queries
     const hamburger = document.getElementById('hamburgerBtn');
