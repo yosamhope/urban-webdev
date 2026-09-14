@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico" />
     <!-- Google Tag Manager -->
     <!-- Google tag (gtag.js) -->
     <script
@@ -22,11 +23,11 @@
     <title>Web Development Services in Nairobi, Kenya | urbanwebdev</title>
     <meta
       name="description"
-      content="Explore urbanwebdev's web development services in Nairobi, Kenya: website development, e-commerce solutions, UI/UX design, web applications, SEO & digital marketing, and maintenance & support."
+      content="Explore urbanwebdev's basic, standard, and corporate website packages in Nairobi, Kenya."
     />
     <meta
       name="keywords"
-      content="web development services Kenya, website development Nairobi, ecommerce website Kenya, UI UX design Nairobi, web application development Kenya, SEO services Kenya, website maintenance Nairobi, software development services Kenya"
+      content="website packages Kenya, website development Nairobi, business website design Kenya, corporate website Nairobi"
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="urbanwebdev" />
@@ -50,7 +51,7 @@
     />
     <meta
       property="og:description"
-      content="Explore urbanwebdev's web development services in Nairobi, Kenya: website development, e-commerce solutions, UI/UX design, web applications, SEO & digital marketing, and maintenance & support."
+      content="Explore urbanwebdev's basic, standard, and corporate website packages in Nairobi, Kenya."
     />
     <meta
       property="og:image"
@@ -67,7 +68,7 @@
     />
     <meta
       name="twitter:description"
-      content="Explore urbanwebdev's web development services in Nairobi, Kenya: website development, e-commerce solutions, UI/UX design, web applications, SEO & digital marketing, and maintenance & support."
+      content="Explore urbanwebdev's basic, standard, and corporate website packages in Nairobi, Kenya."
     />
     <meta
       name="twitter:image"
@@ -115,6 +116,17 @@
       .pricing-card:hover {
         transform: translateY(-5px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .service-timeline-item:not(:first-child),
+      #pkg-landing-page,
+      #pkg-basic-ecommerce,
+      #pkg-advanced-ecommerce,
+      #pkg-domain-registration,
+      #pkg-web-hosting,
+      #pkg-ssl-certificate,
+      #additional-services {
+        display: none;
       }
 
       .card-category {
@@ -369,7 +381,7 @@
         }
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         .pricing-grid {
           grid-template-columns: 1fr;
         }
@@ -508,7 +520,7 @@
         color: #60a5fa;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         .services-timeline::before {
           left: 28px;
         }
@@ -538,68 +550,20 @@
           {
             "@type": "Service",
             "position": 1,
-            "name": "Website Development",
-            "areaServed": "Nairobi, Kenya",
-            "provider": {
-              "@type": "ProfessionalService",
-              "name": "urbanwebdev"
-            },
-            "description": "Custom, responsive, and high-performance websites tailored to your business goals."
+            "name": "Basic Website",
+            "description": "A clean, professional website for small businesses at Ksh 50,000."
           },
           {
             "@type": "Service",
             "position": 2,
-            "name": "E-commerce Solutions",
-            "areaServed": "Nairobi, Kenya",
-            "provider": {
-              "@type": "ProfessionalService",
-              "name": "urbanwebdev"
-            },
-            "description": "Secure online stores that convert visitors into loyal customers, with M-Pesa integration."
+            "name": "Standard Website",
+            "description": "A fuller website with room to grow at Ksh 70,000."
           },
           {
             "@type": "Service",
             "position": 3,
-            "name": "UI/UX Design",
-            "areaServed": "Nairobi, Kenya",
-            "provider": {
-              "@type": "ProfessionalService",
-              "name": "urbanwebdev"
-            },
-            "description": "Beautiful, user-centered designs that deliver seamless experiences."
-          },
-          {
-            "@type": "Service",
-            "position": 4,
-            "name": "Web Applications",
-            "areaServed": "Nairobi, Kenya",
-            "provider": {
-              "@type": "ProfessionalService",
-              "name": "urbanwebdev"
-            },
-            "description": "Powerful web apps to streamline operations and boost productivity."
-          },
-          {
-            "@type": "Service",
-            "position": 5,
-            "name": "SEO & Digital Marketing",
-            "areaServed": "Nairobi, Kenya",
-            "provider": {
-              "@type": "ProfessionalService",
-              "name": "urbanwebdev"
-            },
-            "description": "Improve visibility, attract traffic, and grow your brand online."
-          },
-          {
-            "@type": "Service",
-            "position": 6,
-            "name": "Maintenance & Support",
-            "areaServed": "Nairobi, Kenya",
-            "provider": {
-              "@type": "ProfessionalService",
-              "name": "urbanwebdev"
-            },
-            "description": "Ongoing support and maintenance to keep your website running smoothly."
+            "name": "Corporate Website",
+            "description": "A polished website for established businesses at Ksh 90,000."
           }
         ]
       }
@@ -640,19 +604,10 @@
               <a href="#pkg-small-business-basic"
                 >Small Business Website (Basic)</a
               >
-              <a href="#pkg-landing-page">Landing Page Website</a>
               <a href="#pkg-small-business-standard"
-                >Small Business Website (Standard)</a
-              >
+                >Standard Business Website
+              </a>
               <a href="#pkg-corporate-website">Corporate Website</a>
-              <a href="#pkg-basic-ecommerce">Basic E-commerce</a>
-              <a href="#pkg-advanced-ecommerce">Advanced E-commerce</a>
-              <a href="#pkg-domain-registration">Domain Registration</a>
-              <a href="#pkg-web-hosting">Web Hosting</a>
-              <a href="#pkg-ssl-certificate">SSL Certificate</a>
-              <a href="#pkg-website-maintenance">Website Maintenance</a>
-              <a href="#pkg-seo-optimization">SEO Optimization</a>
-              <a href="#pkg-hosting-solutions">Hosting Solutions</a>
             </div>
           </div>
           <a href="../portfolio/" data-i18n="nav.portfolio">Portfolio</a>
@@ -689,7 +644,8 @@
         </h1>
         <p data-i18n="hero.services.text">
           Website packages designed to help businesses launch faster and grow
-          smarter, from a simple landing page to a full e-commerce platform.
+          smarter with a clear, professional website package for every stage of
+          growth.
         </p>
         <div class="hero-split-actions">
           <a href="#pricing" class="cta-button" data-i18n="hero.services.btn1"
@@ -775,11 +731,9 @@
         <h2>Web Development Services in Nairobi, Kenya</h2>
         <p>
           urbanwebdev is a web development and software development company
-          based in Nairobi, Kenya, offering a complete range of digital services
-          for businesses across the country. From custom website development in
-          Nairobi to e-commerce platforms, UI/UX design, web applications, SEO,
-          and ongoing maintenance &mdash; these are the core services we offer
-          to help Kenyan businesses grow online.
+          based in Nairobi, Kenya, offering focused website development packages
+          for businesses across the country. Choose a basic, standard, or
+          corporate website built to help your business grow online.
         </p>
       </div>
 
@@ -1333,7 +1287,7 @@
           <p class="card-tagline">
             A clean, professional site for small businesses
           </p>
-          <div class="card-price">Ksh 15,000 – Ksh 30,000</div>
+          <div class="card-price">Ksh 50,000</div>
           <div class="card-actions">
             <a href="../contact/#contactForm" class="card-btn card-btn-primary"
               >Get Free Quote</a
@@ -1348,7 +1302,7 @@
           </div>
           <hr class="card-divider" />
           <div class="card-features">
-            <div class="card-features-heading">What’s included:</div>
+            <div class="card-features-heading">Included:</div>
             <ul class="card-features-list">
               <li>
                 <svg
@@ -1711,7 +1665,7 @@
           <div class="card-category">Standard Website Design</div>
           <h3 class="card-title">Small Business Website</h3>
           <p class="card-tagline">A fuller site with room to grow</p>
-          <div class="card-price">Ksh 30,000 – Ksh 70,000</div>
+          <div class="card-price">Ksh 70,000</div>
           <div class="card-actions">
             <a href="../contact/#contactForm" class="card-btn card-btn-primary"
               >Get Free Quote</a
@@ -1726,7 +1680,7 @@
           </div>
           <hr class="card-divider" />
           <div class="card-features">
-            <div class="card-features-heading">What’s included:</div>
+            <div class="card-features-heading">Included:</div>
             <ul class="card-features-list">
               <li>
                 <svg
@@ -1916,7 +1870,7 @@
           <p class="card-tagline">
             A polished presence for established businesses
           </p>
-          <div class="card-price">Ksh 30,000 – Ksh 150,000+</div>
+          <div class="card-price">Ksh 90,000</div>
           <div class="card-actions">
             <a href="../contact/#contactForm" class="card-btn card-btn-primary"
               >Get Free Quote</a
@@ -3485,32 +3439,6 @@
             <li>
               <a href="services.html#pricing" data-i18n="footer.svc.standard"
                 >Standard Website Design</a
-              >
-            </li>
-            <li>
-              <a href="services.html#pricing" data-i18n="footer.svc.ecommerce"
-                >E-commerce Website</a
-              >
-            </li>
-            <li>
-              <a
-                href="services.html#additional-services"
-                data-i18n="footer.svc.maintenance"
-                >Website Maintenance</a
-              >
-            </li>
-            <li>
-              <a
-                href="services.html#additional-services"
-                data-i18n="footer.svc.seo"
-                >SEO Optimization</a
-              >
-            </li>
-            <li>
-              <a
-                href="services.html#additional-services"
-                data-i18n="footer.svc.hosting"
-                >Hosting Solutions</a
               >
             </li>
           </ul>
